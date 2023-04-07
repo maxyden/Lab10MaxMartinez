@@ -1,0 +1,28 @@
+@import "variables";
+
+
+
+@for $i from 1 through 10 { // here is my for 
+    @if $i  < 6 {  //here is my if/else, it is simple checks for img  and then either increases size and opacity or reduces it.
+
+
+    .Im#{$i} {
+        max-width: $size * $i; //increase img size
+        border: 5px dotted greenyellow;
+        opacity:  (($i/10)*2) ; //increase opacity
+    
+    } 
+    
+
+ }
+  @else {
+    .Im#{$i} {max-width: $negative / $i;//reduce img size
+        border: 5px dotted greenyellow;
+        opacity: 1.20 - ($i/10); } //reduce opacity
+   
+  }
+
+}
+
+
+
